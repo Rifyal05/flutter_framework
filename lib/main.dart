@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_framework/API/simpleapitest.dart';
 import 'package:flutter_framework/UI/BUTTON/dart_button.dart';
 import 'package:flutter_framework/UI/CARD/dart_card.dart';
 import 'package:flutter_framework/UI/CARD/dartcard_withlistview.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData.dark(
           useMaterial3: true,
         ),
-        home: const DartWrapper()
+        home: Simpleapitest()
     );
   }
 }
