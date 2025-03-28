@@ -15,7 +15,7 @@ class _SimpleapitestState extends State<Simpleapitest> {
   List<String> imageUrls = [];
   bool isLoading = false;
   String searchQuery = '';
-  final String pexelsApiKey = 'Pexels Api Key here';
+  final String pexelsApiKey = 'API KEY HERE';
 
   Future<void> fetchImages() async {
     setState(() {
@@ -23,7 +23,7 @@ class _SimpleapitestState extends State<Simpleapitest> {
       imageUrls.clear();
     });
 
-    final url = Uri.parse('https://api.pexels.com/v1/search?query=$searchQuery&per_page=20');
+    final url = Uri.parse('https://api.pexels.com/v1/search?query=$searchQuery&per_page=999');
     final response = await http.get(
       url,
       headers: {
@@ -47,7 +47,7 @@ class _SimpleapitestState extends State<Simpleapitest> {
   @override
   void initState() {
     super.initState();
-    searchQuery = 'nature';
+    searchQuery = 'sniper';
     fetchImages();
   }
 
